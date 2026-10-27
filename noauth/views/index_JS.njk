@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Timers</title>
+    <link rel="icon" type="image/png" href="/clock.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.4/dist/css/uikit.min.css"/>
+    <style>
+      /* v-cloak больше не нужен */
+      .mono {
+        font-family: monospace;
+      }
+      .stop-btn {
+        cursor: pointer;
+        color: #f0506e;
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="uk-container uk-margin-top uk-margin-bottom">
+      <div>
+        <input id="timer-desc" class="uk-input" placeholder="Type description...">
+        <p>
+          <button id="timer-create" class="uk-button uk-button-primary">
+            <span uk-icon="play"></span> Start timer
+          </button>
+        </p>
+      </div>
+
+      <div>
+        <h2>Active timers:</h2>
+        <ul id="active-timers" class="uk-list">
+          <!-- Сюда JS вставит активные таймеры -->
+        </ul>
+      </div>
+
+      <div>
+        <h2>Old timers:</h2>
+        <ul id="old-timers" class="uk-list">
+          <!-- Сюда JS вставит историю -->
+        </ul>
+      </div>
+    </section>
+
+    <!-- Оставляем UIkit, удаляем Vue -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.4/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.4/dist/js/uikit-icons.min.js"></script>
+    <script src="/main.js"></script>
+  </body>
+</html>
